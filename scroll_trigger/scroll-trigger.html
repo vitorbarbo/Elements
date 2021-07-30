@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="scroll-trigger.css">
+</head>
+<body>
+    <section>
+        <h2 class="text">Scroll to See<span> Magic</span></h2>
+        <div class="box box1"><img src="../page_test/img/apple.png" alt=""></div>
+        <div class="box box2"><img src="../page_test/img/mango.png" alt=""></div>
+        <div class="box box3"><img src="../page_test/img/watermelon.png" alt=""></div>
+        <div class="box box4"><img src="../page_test/img/dragonFruits.png" alt=""></div>
+        <div class="box box5"><img src="../page_test/img/pineApple.png" alt=""></div>
+    </section>    
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+<script>
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: "section",
+            start: "center center",
+            end: "bottom top",
+            scrub: 2,
+            markers: false,
+            pin: true
+        }
+    })
+    .to(".text", {scale : 0})
+    .to(".box1", {x : innerWidth * -1})
+    .to(".box2", {opacity : 0})
+    .to(".box3", {x : innerWidth * 1})
+    .to(".box4", {x : innerWidth * -1})
+    .to(".box5", {x : innerWidth * 1});
+
+
+</script>
+
+</html>
