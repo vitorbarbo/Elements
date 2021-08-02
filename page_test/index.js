@@ -1,3 +1,4 @@
+
 let menuToggle = document.querySelector('.toggle');
         let navigation = document.querySelector('.navigation');
         menuToggle.onclick = function () {
@@ -74,21 +75,23 @@ let menuToggle = document.querySelector('.toggle');
 
         let tl= gsap.timeline({
             scrollTrigger: {
-                trigger: "#img_2",
-                start: "top bottom",
+                trigger: "#section_2",
+                start: "top 90%",
+                end: "bottom 90%",
                 scrub: true,
 
             }
         });
 
-        tl.from("#img_2", { x: 300, opacity: 0.6, duration: 0.8})
-tl.from(".title_2", { x: -400, duration: 0.6}, "-=-2")
+        tl.from("#img_2", { x: 800, opacity: 0.6, duration: 1})
+tl.from(".title_2", { x: -800, duration: 0.6}, "-=-2")
 tl.from(".text_2", { scale: 0.3, duration: 0.6}, "-=-2")
         
         let at = gsap.timeline({
             scrollTrigger: {
-                trigger: "#img_3",
+                trigger: "#section_3",
                 start: "top bottom",
+                end: "bottom 80%",
                 scrub: true
             }
         });
@@ -96,6 +99,7 @@ tl.from(".text_2", { scale: 0.3, duration: 0.6}, "-=-2")
         at.from("#img_3", { scale: 0.5, opacity: 0.6, duration: 0.8})
         at.from(".title_3", { y: -600, duration: 0.6}, "-=-2")
         at.from(".text_3", { scale: 0.4, duration: 0.6}, "-=-2")
+
 
         
         

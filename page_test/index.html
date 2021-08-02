@@ -8,8 +8,10 @@
 
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="../scroll_trigger/scroll-trigger.css">
-    <link rel="stylesheet" href="../contact_form/contact-form.css">
     <script src="jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="../carousel_coverflow/carousel.css">
 </head>
 
 <body>
@@ -22,6 +24,7 @@
             <ul class="navigation">
                 <li><a href="#" class="active">Home</a></li>
                 <li><a href="#section_2">Quem somos</a></li>
+                <li><a href="#section_2.5">Departamentos</a></li>
                 <li><a href="#section_3">Institucional</a></li>
                 <li><a href="#section_4">Contato</a></li>
             </ul>
@@ -30,7 +33,8 @@
             <div class="textBox">
                 <h2 id="title">Este é o título da seção maçã</h2>
                 <p id="texto"> Este é o texto da seção maçã</p>
-                <a href="#">Learn More</a>
+                <a href="https://api.whatsapp.com/send?phone=5519996637468&text=Ol%C3%A1,%20gostaria%20de%20receber%20os%20produtos%20de%20sua%20p%C3%A1gina!"
+                    target="_blank">Whatsapp</a>
             </div>
             <div class="imgBox">
                 <img src="./img/apple.png" class="fruits" alt="Apple">
@@ -42,17 +46,16 @@
             <li data-text="Mango"><img src="./img/mango.png"
                     onclick="imgSlider('./img/mango.png'); changeBgColor('#ffcc02'); placeText(1); placeTitle(1)"></li>
             <li data-text="Watermelon"><img src="./img/watermelon.png"
-                    onclick="imgSlider('./img/watermelon.png'); changeBgColor('#92ba3c'); placeText(2); placeTitle(2)"></li>
+                    onclick="imgSlider('./img/watermelon.png'); changeBgColor('#92ba3c'); placeText(2); placeTitle(2)">
+            </li>
             <li data-text="Dragon Fruits"><img src="./img/dragonFruits.png"
-                    onclick="imgSlider('./img/dragonFruits.png'); changeBgColor('#fb6cb2'); placeText(3); placeTitle(3)"></li>
+                    onclick="imgSlider('./img/dragonFruits.png'); changeBgColor('#fb6cb2'); placeText(3); placeTitle(3)">
+            </li>
             <li data-text="Pineapple"><img src="./img/pineApple.png"
-                    onclick="imgSlider('./img/pineApple.png'); changeBgColor('#ffb42b'); placeText(4); placeTitle(4)"></li>
+                    onclick="imgSlider('./img/pineApple.png'); changeBgColor('#ffb42b'); placeText(4); placeTitle(4)">
+            </li>
         </ul>
-        <ul class="sci">
-            <li><a href="#"><img src="./img/facebook.png" alt="Facebook"></a></li>
-            <li><a href="#"><img src="./img/twitter.png" alt="Twitter"></a></li>
-            <li><a href="#"><img src="./img/instagram.png" alt="Instagram"></a></li>
-        </ul>
+
     </section>
 
     <section id="section_2" style="background-color: yellow;">
@@ -61,11 +64,11 @@
                 <h2 id="title" class="title_2" style="color: black;">Quem somos</h2>
                 <p id="texto" class="text_2" style="color: black;">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
                     irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
                     non proident, sunt in culpa qui officia deserunt mollit anim
                     id est laborum.
                 </p>
@@ -76,17 +79,69 @@
         </div>
     </section>
 
+    <section id="section_2.5" style="background-color: #fff38e; padding: 2em; overflow-y: hidden;">
+        <div class="content" style="flex-direction: column;">
+
+            <h2 id="title" class="title_5">Nossos Departamentos</h1>
+
+                <!-- Swiper -->
+                <div class="swiper-container mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="../page_test/img/apple.png" />
+                                <p>Apple</p>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="../page_test/img/mango.png" />
+                                <p>Mango</p>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="../page_test/img/watermelon.png" />
+                                <p>Watermelon</p>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="../page_test/img/dragonFruits.png" />
+                                <p>Dragon Fruit</p>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="../page_test/img/pineApple.png" />
+                                <p>Pineapple</p>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination" style='bottom: 50px'></div>
+                </div>
+        </div>
+
+        <!-- Swiper JS -->
+    </section>
+
     <section id="section_3" style="background-color: cyan;">
         <div class="content">
             <div class="textBox">
                 <h2 id="title" class="title_3" style="color: black;">Institucional</h2>
                 <p id="texto" class="text_3" style="color: black;">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
                     irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
                     non proident, sunt in culpa qui officia deserunt mollit anim
                     id est laborum.
                 </p>
@@ -99,80 +154,52 @@
 
     <div id="in_between"></div>
 
-    <section id="section_4">
-        <div class="container">
-            <div class="contactInfo">
-                <div>
-                    <h2>Contact Info</h2>
-                    <ul class="info">
-                        <li>
-                            <span><img src="./img/location.png" alt=""></span>
-                            <span>
-                                xxxx NameofStreet Str./Av.<br>
-                                StateName, XX<br>
-                                ZIPCode
-                            </span>
-                        </li>
-                        <li>
-                            <span><img src="./img/mail.png" alt=""></span>
-                            <span>
-                                lorem@ipsum.com
-                            </span>
-                        </li>
-                        <li>
-                            <span><img src="./img/call.png" alt=""></span>
-                            <span>
-                                + 55 (19) 3123 - 1234
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-
-                <ul class="sci">
-                    <li><a href="#"><img src="./img/1.png" alt=""></a></li>
-                    <li><a href="#"><img src="./img/2.png" alt=""></a></li>
-                    <li><a href="#"><img src="./img/3.png" alt=""></a></li>
-                    <li><a href="#"><img src="./img/4.png" alt=""></a></li>
-                    <li><a href="#"><img src="./img/5.png" alt=""></a></li>
-                </ul>
-
-            </div>
-            <div class="contactForm">
-                <h2>Send a Message</h2>
-                <div class="formBox">
-                    <div class="inputBox w50">
-                        <input type="text" name="" required>
-                        <span>First Name</span>
-                    </div>
-                    <div class="inputBox w50">
-                        <input type="text" required>
-                        <span>Last Name</span>
-                    </div>
-                    <div class="inputBox w50">
-                        <input type="email" required>
-                        <span>Email Address</span>
-                    </div>
-                    <div class="inputBox w50">
-                        <input type="text" required>
-                        <span>Mobile Number</span>
-                    </div>
-                    <div class="inputBox w100">
-                        <textarea required></textarea>
-                        <span>Write your message here...</span>
-                    </div>
-                    <div class="inputBox w100">
-                        <input type="submit" value="Send">
-                    </div>
-
+    <section id="section_4">           
+                <div class="login-box">
+                    <h2>Deixe sua mensagem!</h2>
+                    <img class="baloon" src="messenger.png" alt="Mensagem">
+                    <form>
+                        <div class="user-box">
+                            <input type="text" name="" required="">
+                            <label>Nome</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="password" name="" required="">
+                            <label>Sobrenome</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="text" name="" required="">
+                            <label>Endereço</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="text" name="" required="">
+                            <label>Telefone</label>
+                        </div>
+                            <textarea></textarea><br>
+                        <a href="#">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Submit
+                        </a>
+                    </form>
                 </div>
             </div>
+        </div>
 
         </div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
-<script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <!-- Swiper JS -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="carousel.js"></script>
+
+
 
 </body>
 

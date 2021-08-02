@@ -12,12 +12,13 @@ html {
 section {
     position: relative;
     width: 100%;
-    min-height: 100vh;
-    padding: 100px;
+    height: 100vh;
+    padding: 5em;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
+    overflow-y: hidden;
     scroll-behavior: smooth;
 }
 .bg {
@@ -43,7 +44,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
+    padding: 20px 5em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,7 +73,7 @@ header .navigation li a {
     text-decoration: none;
     font-variant: small-caps;
     letter-spacing: 2.5px;
-    height: 40px;
+    height: 35px;
 }
 header .navigation li a.active,
 header .navigation li a:hover {
@@ -107,7 +108,7 @@ header .navigation li a:hover {
     padding: 8px 20px;
     background: #fff;
     color: #333;
-    border-radius: 40px;
+    border-radius: 10px;
     font-weight: 500;
     letter-spacing: 1px;
     text-decoration: none;
@@ -182,7 +183,57 @@ header .navigation li a:hover {
     transform: scale(0.6);
     filter: invert(1);
 }
+.title_5 {
+    text-align: center;
+    font-size: 2.5em; 
+    margin-bottom: 1em;
+}
+#section_4 {
+    background-color: #7FFFD4;
+}
+.inputBox input {
+    border-radius: 5px;
+    border: 1px solid transparent;
+    width: 20em;
+}
+.inputBox textarea {
+    width: 20em;
+    height: 5em;
+}
+.inputBox button {
+    width: 10em;
+    height: 2em;
+    cursor:initial;
+    border-radius: 5px;
+    border: 1px solid solid;
+}
+
+@media (min-width: 350px) and (max-width: 500px) {
+
+.fruits {
+    height: 17em !important;
+}
+.thumb {
+    left: 25%
+}
+.title_5 {
+    font-size: 2em;
+}
+}
+@media (max-width: 768px) {
+
+section {
+    padding: 1em !important;
+}
+.fruits {
+    width: 70%;
+    padding-top: 3em;
+}
+
+
+}
 @media (max-width: 991px) {
+    
     .bg::before {
         display: none;
     }
@@ -194,7 +245,8 @@ header .navigation li a:hover {
         padding-bottom: 120px;
     }
     .content {
-        margin-top: 100px;
+        margin-top: 5px !important;
+        padding-top: 5px !important;
         flex-direction: column;
     }
     .content .textBox {
@@ -209,7 +261,9 @@ header .navigation li a:hover {
         justify-content: center;
     }
     .content .imgBox img {
-        max-width: 300px;
+        max-width: 20em;
+        height: 22em;
+        margin-left: 4em;
     }
     .thumb li {
         margin: 0 3px;
@@ -233,23 +287,32 @@ header .navigation li a:hover {
     }
     header .navigation {
         display: none;
+        padding-top: 20px;
     }
     header .navigation.active {
         position: fixed;
         top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        right: 0;
+        width: 50%;
+        height: 40%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background: #fc4a55;
-        z-index: 10;
+        background: salmon;
+        z-index: 9000;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
     }
     header .navigation li a { 
         font-size: 1.2em;
         margin: 0 5px;
+    }
+
+    header > .navigation {
+        transition: all 0.3s ease-in;
     }
     .toggle {
         position: relative;
@@ -261,6 +324,7 @@ header .navigation li a:hover {
         background-position: center;
         background-repeat: no-repeat;
         z-index: 10000;
+        
     }
    .toggle.active {
         position: fixed;
@@ -271,7 +335,6 @@ header .navigation li a:hover {
         background-repeat: no-repeat;
     }
 }
-
 #section_2 .text {
     position: absolute;
     top: -60px;
@@ -280,7 +343,141 @@ header .navigation li a:hover {
     font-weight: 600;
 }
 
+.info {
+    margin-bottom: 2em;
+}
+.info li {
+    padding-top: 1em;
+}
+.inputBox{
+    padding-top: 1em;
+}
 
+/* FORM SECTION */
+/* FORM SECTION */
+/* FORM SECTION */
+/* FORM SECTION */
+/* FORM SECTION */
 
+.baloon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    filter: invert(1);
 
+}
 
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+  
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+  }
+  
+  .login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
+  textarea {
+      width: 20em;
+      height: 5em;
+  }
+  
+  .login-box a:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4;
+/*                 0 0 50px #03e9f4,
+ *//*                 0 0 100px #03e9f4;
+ */  
+    transition: 1s
+}
+  
+  .login-box a span {
+    position: absolute;
+    display: block;
+  }
+
+  .btn {
+    padding: 8px 20px;
+    border-radius: 0;
+    overflow: hidden;
+}
+.btn::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, var(--primary-color), transparent);
+    transform: translateX(-100%);
+    transition: 0.6s;
+}
+.btn:hover {
+    background: transparent;
+    box-shadow: 0 0 20px 10px rgba(51, 152, 219, 0.5);
+}
+.btn:hover::before {
+    transform: translateX(100%);
+}

@@ -1,0 +1,60 @@
+   
+      @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "Poppins", sans-serif;
+      }
+      
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+
+      }
+      .swiper-container {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-radius: 10px;
+        top: 28%;
+
+      }
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0006)
+
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 90%;
+        padding-top: 15px;
+          
+      }
+      .swiper-slide p{
+        position: absolute;
+        font-size: 22px;
+        font-weight: 500;
+        top: -10%;
+        left: 33%;
+        font-variant: small-caps;
+        letter-spacing: 1px;
+        color: black;
+        
+    }
